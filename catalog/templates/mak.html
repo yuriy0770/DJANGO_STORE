@@ -1,0 +1,32 @@
+{% extends 'base/home.html' %}
+{% block content %}
+
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Продукт {{ name }}</h1>
+    <p class="lead">Информация о продукте</p>
+</div>
+<main class="container">
+    <div class="bg-body-tertiary p-5 rounded mt-3">
+        <h1>
+            <ya-tr-span data-index="1-0" data-translated="true" data-source-lang="en" data-target-lang="ru"
+                        data-value="Bottom Navbar example" data-translation="Пример нижней панели навигации" data-ch="0"
+                        data-type="trSpan" style="visibility: inherit !important;">{{ name }}
+            </ya-tr-span>
+        </h1>
+        <p class="lead">
+            <ya-tr-span data-index="2-0" data-translated="true" data-source-lang="en" data-target-lang="ru"
+                        data-value="This example is a quick exercise to illustrate how the bottom navbar works."
+                        data-translation="Этот пример — краткое руководство по использованию нижней панели навигации."
+                        data-ch="0" data-type="trSpan" style="visibility: inherit !important;">{{ description }}
+            </ya-tr-span>
+        </p>
+        <a class="btn btn-lg btn-primary" href="{% url 'catalog:home' %}" role="button">
+            <ya-tr-span data-index="3-0" data-translated="true" data-source-lang="en" data-target-lang="ru"
+                        data-value="View navbar docs »" data-translation="Просмотр документов navbar »" data-ch="0"
+                        data-type="trSpan" style="visibility: inherit !important;">Назад
+            </ya-tr-span>
+        </a></div>
+        <img src="{{ prod.image }}">
+</main>
+{% endblock %}
